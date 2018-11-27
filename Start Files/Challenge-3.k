@@ -11,3 +11,34 @@ The steps involved are to:
 5. Move forward to the east end of the world.
 
 */
+import "turns";
+
+function ClimbOverMountain(){
+	move();
+	climbMountain();
+	placeFlag();
+	leaveMountain();
+	move();
+}
+
+function climbMountain(){
+	repeat (4){
+		turnLeft();
+		move();
+		turnRight();
+		move();
+	}
+}
+
+function placeFlag(){
+	putBeeper();
+}
+
+function leaveMountain(){
+	repeat (4){
+		move();
+		turnRight();
+		move();
+		turnLeft();
+	}
+}
